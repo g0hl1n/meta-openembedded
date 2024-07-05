@@ -1,0 +1,25 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Christian Heimes <christian@python.org>
+Date: Wed, 5 Jun 2024 11:34:52 +0200
+Subject: [PATCH] Lower MSRV to 1.75 (#1316)
+
+Upstream-Status: Backport [https://github.com/pydantic/pydantic-core/commit/ebef5bdf92707f5e1739931150893ae6c7ccc531]
+
+Signed-off-by: Christian Heimes <christian@python.org>
+---
+ Cargo.toml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/Cargo.toml b/Cargo.toml
+index 88470c5..f8170a2 100644
+--- a/Cargo.toml
++++ b/Cargo.toml
+@@ -24,7 +24,7 @@ include = [
+     "!tests/.pytest_cache",
+     "!*.so",
+ ]
+-rust-version = "1.76"
++rust-version = "1.75"
+ 
+ [dependencies]
+ pyo3 = { version = "0.21.1", features = ["generate-import-lib", "num-bigint"] }

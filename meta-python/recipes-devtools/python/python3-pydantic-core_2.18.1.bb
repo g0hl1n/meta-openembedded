@@ -8,14 +8,17 @@ HOMEPAGE = "https://github.com/pydantic/pydantic-core"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=ab599c188b4a314d2856b3a55030c75c"
 
-SRC_URI += "file://0001-Bumps-pyo3-https-github.com-pyo3-pyo3-from-0.20.2-to.patch"
-SRC_URI[sha256sum] = "1cac689f80a3abab2d3c0048b29eea5751114054f032a941a32de4c852c59cad"
+SRC_URI[sha256sum] = "de9d3e8717560eb05e28739d1b35e4eac2e458553a52a301e51352a7ffc86a35"
 
 DEPENDS = "python3-maturin-native python3-typing-extensions"
 
 require ${BPN}-crates.inc
 
 inherit pypi cargo-update-recipe-crates python_maturin
+SRC_URI += "\
+    file://0001-Lower-MSRV-to-1.75-1316.patch \
+    file://0001-Fix-generate_self_schema-for-Python-3.12-1299.patch \
+"
 
 PYPI_PACKAGE = "pydantic_core"
 
